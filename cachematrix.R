@@ -1,15 +1,19 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Here we are going to have function able to invert matrices
 
-## Write a short comment describing this function
+## First, the function is given a matrix and it inverts if the matrix is invertible
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    m <- NULL
+    solve(x)
 }
 
 
-## Write a short comment describing this function
+## Now we want to see whether the inverse has been calculated or not.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    m <- solve(x)
+    if(!is.null(m)) {
+        message ("getting cached data")
+        return(m)
+     }
 }
